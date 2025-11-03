@@ -1,3 +1,11 @@
+# [1.1.0](https://github.com/lennyRBLX/apk-patches/compare/v1.0.5...v1.1.0) (2025-11-03)
+
+
+### Features
+
+* DebridStream ([d8a3af1](https://github.com/lennyRBLX/apk-patches/commit/d8a3af1332639b0c64fa3df1036266f4564977d9))
+* DebridStream ([8cb25e4](https://github.com/lennyRBLX/apk-patches/commit/8cb25e45512143beccccac5cd2b1ec5cc75731b3))
+
 ## [1.0.5](https://github.com/lennyRBLX/apk-patches/compare/v1.0.4...v1.0.5) (2025-01-12)
 
 
