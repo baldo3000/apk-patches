@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/lennyRBLX/apk-patches/compare/v1.1.0...v1.1.1) (2025-11-03)
+
+
+### Bug Fixes
+
+* Release ([16ae1eb](https://github.com/lennyRBLX/apk-patches/commit/16ae1ebc235f56d3db3f5b15994e5d81c76b3bb6))
+
 # [1.1.0](https://github.com/lennyRBLX/apk-patches/compare/v1.0.5...v1.1.0) (2025-11-03)
 
 
