@@ -46,12 +46,18 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: GPG Version Check
+        run: gpg --version
+
       - name: Import GPG key
         uses: crazy-max/ghaction-import-gpg@v6
         with:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
           passphrase: ${{ secrets.GPG_PASSPHRASE }}
-          fingerprint: ${{ vars.GPG_FINGERPRINT }}
+          fingerprint: 6773CC6DD16A1FB6FAFED2A9F1AE016ACB53BD6F
+          # These lines fix the "Not implemented" agent error
+          git_user_signingkey: true
+          git_commit_gpgsign: true
 
       - name: Release
         env:
