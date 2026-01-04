@@ -1,3 +1,23 @@
+# 1.0.0 (2026-01-04)
+
+
+### Bug Fixes
+
+* MacroFactor data loss ([b1003f2](https://github.com/baldo3000/apk-patches/commit/b1003f2ebcb3c7c471b40d7fba96fe524db65fc4))
+* MacroFactor Logins ([3c1935d](https://github.com/baldo3000/apk-patches/commit/3c1935d42086eac76e47b0bf86f83ec32aa1a44e))
+* MacroFactor Logins ([70da063](https://github.com/baldo3000/apk-patches/commit/70da0639da0b7e93a30e92e2688824c07051c7d2))
+* MacroFactor Logins ([e70dc59](https://github.com/baldo3000/apk-patches/commit/e70dc593846d4b9612c7082c49bd9df7f5547a4c)), closes [#2](https://github.com/baldo3000/apk-patches/issues/2)
+* MacroFactor Logins ([e668724](https://github.com/baldo3000/apk-patches/commit/e668724f0bcd7c87107ef3db0f4064f64e2b489a))
+* Release ([16ae1eb](https://github.com/baldo3000/apk-patches/commit/16ae1ebc235f56d3db3f5b15994e5d81c76b3bb6))
+* Release [#2](https://github.com/baldo3000/apk-patches/issues/2) ([6194f15](https://github.com/baldo3000/apk-patches/commit/6194f156c01ef6262327c513905f0ed3a06ebaa5))
+* Release [#3](https://github.com/baldo3000/apk-patches/issues/3) ([7cf1d9e](https://github.com/baldo3000/apk-patches/commit/7cf1d9e94aca572a3d840e7b9cee668c2164608d))
+
+
+### Features
+
+* DebridStream ([d8a3af1](https://github.com/baldo3000/apk-patches/commit/d8a3af1332639b0c64fa3df1036266f4564977d9))
+* DebridStream ([8cb25e4](https://github.com/baldo3000/apk-patches/commit/8cb25e45512143beccccac5cd2b1ec5cc75731b3))
+
 # 1.0.0 (2026-01-03)
 
 
