@@ -22,26 +22,26 @@ val unlockSubscriptionPatch = bytecodePatch(
             
                 :array_8
                 .array-data 1
-                    0x62t
-                    0x32t
-                    -0xbt   
-                    0x4dt
-                    -0x32t
-                    0x53t
-                    -0x76t
-                    -0x2bt
-                    -0x53t
-                    0x25t
-                    0x19t
-                    0x29t
-                    -0x3bt
-                    -0x1et
-                    0x6et
-                    -0x24t
-                    -0x33t
-                    0x20t
-                    0x8t
-                    -0xet
+                    0x44t
+                    0x40t
+                    -0x31t
+                    -0x5t
+                    -0x26t
+                    -0x7ct
+                    -0x74t
+                    0x6ct
+                    -0x75t
+                    -0x62t
+                    0x2t
+                    -0x7ct
+                    0x79t
+                    0x50t
+                    0x74t
+                    0x58t
+                    0x79t
+                    -0x63t
+                    0x51t
+                    0x2ct
                 .end array-data
             """
         )
