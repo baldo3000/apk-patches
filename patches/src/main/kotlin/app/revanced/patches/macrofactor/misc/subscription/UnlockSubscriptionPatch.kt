@@ -8,7 +8,7 @@ val unlockSubscriptionPatch = bytecodePatch(
     name = "Unlock subscription",
     description = "Unlocks the app.",
 ) {
-    compatibleWith("com.sbs.trai")
+    compatibleWith("com.sbs.train")
 
     execute {
         spoofAndroidCertFingerprint.method.removeInstructions(26)
