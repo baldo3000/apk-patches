@@ -22,26 +22,26 @@ val unlockSubscriptionPatch = bytecodePatch(
             
                 :array_8
                 .array-data 1
-                    0x72t
-                    -0x80t
-                    0x3ct
-                    -0x1dt
-                    0xbt
-                    0x7ft
-                    0x47t
-                    -0x18t
-                    0x4dt
-                    -0x7at
-                    -0x68t
-                    0x7ft
-                    0x45t
-                    0x1dt
-                    -0x51t
+                    0x44t
+                    0x40t
+                    -0x31t
+                    -0x5t
+                    -0x26t
+                    -0x7ct
                     -0x74t
-                    0x7at
-                    -0x34t
-                    -0x4bt
-                    -0x60t
+                    0x6ct
+                    -0x75t
+                    -0x62t
+                    0x2t
+                    -0x7ct
+                    0x79t
+                    0x50t
+                    0x74t
+                    0x58t
+                    0x79t
+                    -0x63t
+                    0x51t
+                    0x2ct
                 .end array-data
             """
         )
@@ -58,7 +58,7 @@ val unlockSubscriptionPatch = bytecodePatch(
                     invoke-virtual {v0, v4}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
                     move-result-object v2
                 
-                    const-string v1, "{\"request_date_ms\":1689736676913,\"request_date\":\"2023-07-19T03:17:56Z\",\"subscriber\":{\"non_subscriptions\":{},\"first_seen\":\"2023-07-19T03:17:14Z\",\"original_application_version\":\"246\",\"other_purchases\":{},\"management_url\":\"https://apps.apple.com/account/subscriptions\",\"subscriptions\":{\"com.sbs.diet.1y0599.2w0\":{\"original_purchase_date\":\"2023-07-19T03:17:53Z\",\"expires_date\":\"2099-08-02T03:17:52Z\",\"is_sandbox\":false,\"refunded_at\":null,\"unsubscribe_detected_at\":null,\"grace_period_expires_date\":null,\"period_type\":\"normal\",\"purchase_date\":\"2023-07-19T03:17:52Z\",\"billing_issues_detected_at\":null,\"ownership_type\":\"PURCHASED\",\"store\":\"app_store\",\"auto_resume_date\":null}},\"entitlements\":{\"subscription\":{\"grace_period_expires_date\":null,\"purchase_date\":\"2023-07-19T03:17:52Z\",\"product_identifier\":\"com.sbs.diet.1y0599.2w0\",\"expires_date\":\"2099-08-02T03:17:52Z\"}},\"original_purchase_date\":\"2023-07-18T21:29:29Z\",\"original_app_user_id\":\"id\",\"last_seen\":\"2023-07-19T03:17:14Z\"}}"
+                    const-string v1, "{\"request_date_ms\":1689736676913,\"request_date\":\"2023-07-19T03:17:56Z\",\"subscriber\":{\"non_subscriptions\":{},\"first_seen\":\"2023-07-19T03:17:14Z\",\"original_application_version\":\"39\",\"other_purchases\":{},\"management_url\":\"https://apps.apple.com/account/subscriptions\",\"subscriptions\":{\"com.sbs.train.subscription.1\":{\"original_purchase_date\":\"2023-07-19T03:17:53Z\",\"expires_date\":\"2099-08-02T03:17:52Z\",\"is_sandbox\":false,\"refunded_at\":null,\"unsubscribe_detected_at\":null,\"grace_period_expires_date\":null,\"period_type\":\"normal\",\"purchase_date\":\"2023-07-19T03:17:52Z\",\"billing_issues_detected_at\":null,\"ownership_type\":\"PURCHASED\",\"store\":\"app_store\",\"auto_resume_date\":null}},\"entitlements\":{\"subscription_workouts\":{\"grace_period_expires_date\":null,\"purchase_date\":\"2023-07-19T03:17:52Z\",\"product_identifier\":\"com.sbs.train.subscription.1\",\"expires_date\":\"2099-08-02T03:17:52Z\"}},\"original_purchase_date\":\"2023-07-18T21:29:29Z\",\"original_app_user_id\":\"id\",\"last_seen\":\"2023-07-19T03:17:14Z\"}}"
                     new-instance v0, Lorg/json/JSONObject;
                     invoke-direct {v0, v1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
                     
