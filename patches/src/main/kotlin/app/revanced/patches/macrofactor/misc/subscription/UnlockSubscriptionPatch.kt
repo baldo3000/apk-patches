@@ -69,21 +69,5 @@ val unlockSubscriptionPatch = bytecodePatch(
                     move-object/from16 p1, v0
             """
         )
-
-        spoofInstallerFingerprint.method.addInstructions(
-            0,
-            """
-                const-string v0, "com.android.vending"
-                return-object v0
-            """
-        )
-
-        requestIntegrityTokenFingerprint.method.addInstructions(
-            0,
-            """
-                const/4 v0, 0x0
-                return-object v0
-            """
-        )
     }
 }
