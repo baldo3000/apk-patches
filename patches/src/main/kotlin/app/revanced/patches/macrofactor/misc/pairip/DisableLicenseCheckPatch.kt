@@ -1,4 +1,4 @@
-package app.revanced.patches.shared.misc.pairip.license
+package app.revanced.patches.macrofactor.misc.pairip
 
 import app.revanced.patcher.extensions.InstructionExtensions.addInstruction
 import app.revanced.patcher.patch.bytecodePatch
@@ -8,7 +8,7 @@ import java.util.logging.Logger
 @Suppress("unused")
 val disableLicenseCheckPatch = bytecodePatch(
     name = "Disable Pairip license check",
-    description = "Disables Play Integrity API (Pairip) client-side license check."
+    description = "Disables Play Integrity API (Pairip) client-side license check.",
 ) {
 
     execute {

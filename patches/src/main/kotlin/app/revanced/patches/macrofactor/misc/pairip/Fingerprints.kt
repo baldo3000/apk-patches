@@ -1,4 +1,4 @@
-package app.revanced.patches.shared.misc.pairip.license
+package app.revanced.patches.macrofactor.misc.pairip
 
 import app.revanced.patcher.fingerprint
 
