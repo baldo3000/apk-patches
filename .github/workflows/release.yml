@@ -13,15 +13,17 @@ jobs:
     permissions:
       contents: write
       packages: write
+      id-token: write
+      attestations: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          # Make sure the release step uses its own credentials:
-          # https://github.com/cycjimmy/semantic-release-action#private-packages
-          persist-credentials: false
-          fetch-depth: 0
+        uses: actions/checkout@v5
+        # with:
+        #   # Make sure the release step uses its own credentials:
+        #   # https://github.com/cycjimmy/semantic-release-action#private-packages
+        #   persist-credentials: false
+        #   fetch-depth: 0
 
       - name: Setup Java
         uses: actions/setup-java@v5
@@ -29,8 +31,11 @@ jobs:
           distribution: "temurin"
           java-version: "17"
 
-      - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v3
+      - name: Cache Gradle
+        uses: burrunan/gradle-cache-action@v3
+
+      # - name: Setup Gradle
+      #   uses: gradle/actions/setup-gradle@v3
 
       - name: Build
         env:
@@ -38,16 +43,13 @@ jobs:
         run: ./gradlew build clean
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: "lts/*"
           cache: 'npm'
 
       - name: Install dependencies
         run: npm install
-
-      - name: GPG Version Check
-        run: gpg --version
 
       - name: Import GPG key
         uses: crazy-max/ghaction-import-gpg@v6
