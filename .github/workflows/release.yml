@@ -31,9 +31,6 @@ jobs:
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
-        with:
-          # This explicitly disables the built-in caching features
-          cache-disabled: true
 
       - name: Build
         env:
