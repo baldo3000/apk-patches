@@ -14,3 +14,15 @@ internal val customerInfoFactoryBuildCustomerInfoFingerprint = fingerprint {
         classDef.endsWith("/CustomerInfoFactory;") && method.name == "buildCustomerInfo"
     }
 }
+
+internal val spoofInstallerFingerprint = fingerprint {
+    custom { methodDef, classDef ->
+        methodDef.name == "getInstallerPackageName"
+    }
+}
+
+internal val requestIntegrityTokenFingerprint = fingerprint {
+    custom { methodDef, classDef ->
+        methodDef.name == "requestIntegrityToken"
+    }
+}
