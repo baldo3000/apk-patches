@@ -76,18 +76,6 @@ val unlockSubscriptionPatch = bytecodePatch(
             return-object v0
         """
 
-        // Apply to Firebase InstallerPackageNameProvider
-        firebaseInstallerFingerprint.method.apply {
-            removeInstructions(this.instructions.size) 
-            addInstructions(0, spoofInstallerSmali)
-        }
-
-        // Apply to Firebase IdManager
-        firebaseIdManagerFingerprint.method.apply {
-            removeInstructions(this.instructions.size)
-            addInstructions(0, spoofInstallerSmali)
-        }
-
         // Apply to Flutter PackageInfoPlugin
         flutterPackageInfoFingerprint.method.apply {
             removeInstructions(this.instructions.size)
