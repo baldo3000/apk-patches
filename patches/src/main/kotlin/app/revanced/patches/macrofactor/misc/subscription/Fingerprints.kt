@@ -14,3 +14,25 @@ internal val customerInfoFactoryBuildCustomerInfoFingerprint = fingerprint {
         classDef.endsWith("/CustomerInfoFactory;") && method.name == "buildCustomerInfo"
     }
 }
+
+internal val firebaseInstallerFingerprint = fingerprint {
+    custom { method, classDef ->
+        classDef.endsWith("com/google/firebase/crashlytics/internal/common/InstallerPackageNameProvider;")
+                && method.name == "getInstallerPackageName"
+    }
+}
+
+internal val firebaseIdManagerFingerprint = fingerprint {
+    custom { method, classDef ->
+        classDef.endsWith("com/google/firebase/crashlytics/internal/common/IdManager;")
+                && method.name == "getInstallerPackageName"
+    }
+}
+
+internal val flutterPackageInfoFingerprint = fingerprint {
+    custom { method, classDef ->
+        // The user noted this class name, checking for the plugin class
+        classDef.endsWith("dev/fluttercommunity/plus/packageinfo/PackageInfoPlugin;")
+                && method.name == "getInstallerPackageName"
+    }
+}
