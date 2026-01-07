@@ -8,6 +8,13 @@ internal val spoofAndroidCertFingerprint = fingerprint {
     }
 }
 
+internal val customerInfoFactoryBuildCustomerInfoFingerprint = fingerprint {
+    strings("subscriber")
+    custom { method, classDef ->
+        classDef.endsWith("/CustomerInfoFactory;") && method.name == "buildCustomerInfo"
+    }
+}
+
 internal val firebaseInstallerFingerprint = fingerprint {
     custom { method, classDef ->
         classDef.endsWith("com/google/firebase/crashlytics/internal/common/InstallerPackageNameProvider;")
