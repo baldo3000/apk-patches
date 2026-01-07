@@ -1,6 +1,7 @@
 package app.revanced.patches.macrofactor.misc.subscription
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
 import app.revanced.patcher.extensions.InstructionExtensions.removeInstructions
+import app.revanced.patcher.extensions.InstructionExtensions.instructions
 import app.revanced.patcher.patch.bytecodePatch
 
 @Suppress("unused")
@@ -69,5 +70,28 @@ val unlockSubscriptionPatch = bytecodePatch(
                     move-object/from16 p1, v0
             """
         )
+
+        val spoofInstallerSmali = """
+            const-string v0, "com.android.vending"
+            return-object v0
+        """
+
+        // Apply to Firebase InstallerPackageNameProvider
+        firebaseInstallerFingerprint.method.apply {
+            removeInstructions(this.instructions.size) 
+            addInstructions(0, spoofInstallerSmali)
+        }
+
+        // Apply to Firebase IdManager
+        firebaseIdManagerFingerprint.method.apply {
+            removeInstructions(this.instructions.size)
+            addInstructions(0, spoofInstallerSmali)
+        }
+
+        // Apply to Flutter PackageInfoPlugin
+        flutterPackageInfoFingerprint.method.apply {
+            removeInstructions(this.instructions.size)
+            addInstructions(0, spoofInstallerSmali)
+        }
     }
 }
