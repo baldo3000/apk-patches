@@ -15,23 +15,8 @@ internal val customerInfoFactoryBuildCustomerInfoFingerprint = fingerprint {
     }
 }
 
-internal val firebaseInstallerFingerprint = fingerprint {
-    custom { method, classDef ->
-        classDef.endsWith("com/google/firebase/crashlytics/internal/common/InstallerPackageNameProvider;")
-                && method.name == "getInstallerPackageName"
-    }
-}
-
-internal val firebaseIdManagerFingerprint = fingerprint {
-    custom { method, classDef ->
-        classDef.endsWith("com/google/firebase/crashlytics/internal/common/IdManager;")
-                && method.name == "getInstallerPackageName"
-    }
-}
-
-internal val flutterPackageInfoFingerprint = fingerprint {
-    custom { method, classDef ->
-        classDef.endsWith("dev/fluttercommunity/plus/packageinfo/PackageInfoPlugin;")
-                && method.name == "getInstallerPackageName"
+internal val hasValidTokenFingerprint = fingerprint {
+    custom { methodDef, classDef ->
+        methodDef.name == "hasValidToken" && classDef.endsWith("Lcom/google/firebase/appcheck/internal/DefaultFirebaseAppCheck;")
     }
 }
