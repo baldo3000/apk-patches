@@ -71,23 +71,12 @@ val unlockSubscriptionPatch = bytecodePatch(
             """
         )
 
-        val spoofInstallerSmali = """
-            const-string v0, "com.android.vending"
-            return-object v0
-        """
-
-        // Use replaceInstructions at index 0 to overwrite the start of the method
-        // This is safer than removing the whole method body if there are exception handlers
-        fun safeSpoof(method: app.revanced.patcher.util.proxy.mutableTypes.MutableMethod) {
-            method.apply {
-                // We inject at the very top and immediately return.
-                // This makes the rest of the method unreachable, satisfying the verifier.
-                addInstructions(0, spoofInstallerSmali)
-            }
-        }
-
-        safeSpoof(firebaseInstallerFingerprint.method)
-        safeSpoof(firebaseIdManagerFingerprint.method)
-        safeSpoof(flutterPackageInfoFingerprint.method)
+        hasValidTokenFingerprint.method.addInstructions(
+            0,
+            """
+                const/4 v0, 0x1
+                return v0
+            """
+        )
     }
 }
