@@ -70,12 +70,5 @@ val unlockSubscriptionPatch = bytecodePatch(
                     move-object/from16 p1, v0
             """
         )
-
-        getAppCheckTokenFingerprint.method.addInstructions(
-            0,
-            """
-                const/4 p1, 0x0
-            """
-        )
     }
 }
