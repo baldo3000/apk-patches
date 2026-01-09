@@ -15,8 +15,8 @@ internal val customerInfoFactoryBuildCustomerInfoFingerprint = fingerprint {
     }
 }
 
-internal val hasValidTokenFingerprint = fingerprint {
+internal val getAppCheckTokenFingerprint = fingerprint {
     custom { methodDef, classDef ->
-        methodDef.name == "hasValidToken" && classDef.endsWith("Lcom/google/firebase/appcheck/internal/DefaultFirebaseAppCheck;")
+        methodDef.name == "getAppCheckToken" && classDef.endsWith("Lcom/google/firebase/functions/FirebaseContextProvider;")
     }
 }
