@@ -14,9 +14,3 @@ internal val customerInfoFactoryBuildCustomerInfoFingerprint = fingerprint {
         classDef.endsWith("/CustomerInfoFactory;") && method.name == "buildCustomerInfo"
     }
 }
-
-internal val getAppCheckTokenFingerprint = fingerprint {
-    custom { methodDef, classDef ->
-        methodDef.name == "getAppCheckToken" && classDef.endsWith("Lcom/google/firebase/functions/FirebaseContextProvider;")
-    }
-}
